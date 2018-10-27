@@ -79,6 +79,10 @@ public class EchoServer extends AbstractServer
 	  System.out.println(client+" Connected to the server.");
   }
   //should output but doesn't but also needs to be finished
+  synchronized protected void clientException(ConnectionToClient client, Throwable exception) {
+	  System.out.println("Client disconnected from the server");
+  }
+  
   synchronized protected void clientDisconnected(ConnectionToClient client) {
 	 System.out.println(client+ "Disconnected from the server");
   }
